@@ -20,9 +20,9 @@ const mvgNode = require('mvg-node');
 
 (async () => {
   let home    = await exports.getStation(953)
-	let pullach = await exports.getStation('Pullach (im Isartal)')
+  let pullach = await exports.getStation('Pullach (im Isartal)')
 
-	let departures = await exports.getDepartures(home);
+  let departures = await exports.getDepartures(home);
   console.log(departures);
 })();
 ```
@@ -47,7 +47,7 @@ Output:
     departureId: -120781808,
     sev: false,
     time: 2017-07-24T19:20:14.000Z },
-    ...]
+    ... ]
 ```
 
 
