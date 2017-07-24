@@ -57,7 +57,7 @@ const toStation = async input => {
 
 // Get a route between two stations.
 // `start` and `end` can either be a `Station` id, a `Number`, or a `String`
-// `options` can either a `Date` object (the start time of the route) or an object containing the following keys: startTime, arrivalTime, maxTravelTimeFootwayToStation, maxTravelTimeFootwayToDestination
+// `options` can either a `Date` object (the start time of the route) or an object containing the following keys: start, arrival, maxTravelTimeFootwayToStation, maxTravelTimeFootwayToDestination
 // TODO: We could add support for coordinates in the future
 exports.getRoute = async (start, destination, options = new Date()) => {
 	start = await toStation(start);
