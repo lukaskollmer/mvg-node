@@ -1,9 +1,44 @@
 {
   "name": "mvg-node",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "MVG client for NodeJS",
-  "main": "index.js",
-  "repository": "https://github.com/lukaskollmer/mvg-node",
-  "author": "Lukas Kollmer",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "lukaskollmer/mvg-node",
+  "author": {
+    "name": "Lukas Kollmer",
+    "email": "lukas.kollmer@gmail.com",
+    "url": "lukaskollmer.me"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    ""
+  ],
+  "dependencies": {
+    "meow": "^3.7.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "coveralls": "^2.11.12",
+    "nyc": "^10.0.0",
+    "xo": "^0.17.0"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
 }
