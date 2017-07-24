@@ -17,7 +17,6 @@ $ npm install mvg-node
 ```js
 const mvgNode = require('mvg-node');
 
-
 (async () => {
   let home    = await exports.getStation(953)
   let pullach = await exports.getStation('Pullach (im Isartal)')
@@ -53,23 +52,42 @@ Output:
 
 ## API
 
-### mvgNode(input, [options])
+#### `async getStation(input) -> object`
+Fetch information about a specific station
 
-#### input
+| Parameter | Description |
+| :-------- | :---------- |
+| `input`   | Either a `Number` (station ID) or a `String` (station name) |
+| **Returns** | An `Object` containing information about a specific station. This object can be passed to the other functions |
 
-Type: `string`
+#### `async getStation(input) -> array`
+Search stations by name
 
-Lorem ipsum.
+| Parameter | Description |
+| :-------- | :---------- |
+| `name`   | The station name to search for |
+| **Returns** | An `Array` of object representing stations |
 
-#### options
+#### `async allStations() -> array`
+Fetch all stations
 
-##### foo
+#### `async getDepartures(station) -> array`
+Load a specific station's upcoming departures
 
-Type: `boolean`<br>
-Default: `false`
+| Parameter | Description |
+| :-------- | :---------- |
+| `station`   | Either a station object or a station id |
+| **Returns** | An `Array` of upcoming departures from that station |
 
-Lorem ipsum.
+#### `async getRoute(start, destination, options) -> array`
+Get routes between two stations
 
+| Parameter | Description |
+| :-------- | :---------- |
+| `start`   | The route's starting point (either a station object, or a station id (Number) or a station name (String) |
+| `destination`   | The route's destination (either a station object, or a station id (Number) or a station name (String) |
+| `options`   | Either a date object (the route's starting time) or some more options (`start`, `arrival`, `maxTravelTimeFootwayToStation`, `maxTravelTimeFootwayToDestination`) |
+| **Returns** | An `Array` of routes between the two stations |
 
 ## CLI
 
