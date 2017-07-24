@@ -15,13 +15,13 @@ $ npm install mvg-node
 ### Getting departures
 
 ```js
-const mvgNode = require('mvg-node');
+const mvg = require('mvg-node');
 
 (async () => {
-  let home    = await exports.getStation(953)
-  let pullach = await exports.getStation('Pullach (im Isartal)')
+  let home    = await mvg.getStation(953)
+  let pullach = await mvg.getStation('Pullach (im Isartal)')
 
-  let departures = await exports.getDepartures(home);
+  let departures = await mvg.getDepartures(home);
   console.log(departures);
 })();
 ```
