@@ -14,7 +14,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && nyc ava"
+    "test": "xo && ava"
   },
   "files": [
     "index.js",
@@ -31,14 +31,9 @@
   },
   "devDependencies": {
     "ava": "^0.17.0",
-    "coveralls": "^2.11.12",
-    "nyc": "^10.0.0",
     "xo": "^0.17.0"
   },
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text"
-    ]
+  "xo": {
+    "space": true
   }
 }

@@ -18,7 +18,7 @@ $ npm install mvg-node
 const mvg = require('mvg-node');
 
 (async () => {
-  let home    = await mvg.getStation(953)
+  let home = await mvg.getStation(953)
 
   let departures = await mvg.getDepartures(home);
   console.log(departures);

@@ -1,9 +1,29 @@
 import test from 'ava';
-import fn from '.';
+import mvg from '.';
 
-test('title', t => {
-	const err = t.throws(() => fn(123), TypeError);
-	t.is(err.message, 'Expected a string, got number');
+test('Load station', async t => {
+  const station = await mvg.getStation(953);
 
-	t.is(fn('unicorns'), 'unicorns & rainbows');
+  const expectedStationInfo = {
+    type: 'station',
+    latitude: 48.108379,
+    longitude: 11.663822,
+    id: 953,
+    place: 'München',
+    name: 'Feldbergstraße',
+    hasLiveData: true,
+    hasZoomData: false,
+    products: ['b'],
+    lines: {
+      tram: [],
+      nachttram: [],
+      sbahn: [],
+      ubahn: [],
+      bus: [],
+      nachtbus: [],
+      otherlines: []
+    }
+  };
+
+  t.deepEqual(station, expectedStationInfo);
 });
