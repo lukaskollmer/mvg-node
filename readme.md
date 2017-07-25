@@ -91,28 +91,6 @@ Get routes between two stations
 | `options`   | Either a date object (the route's starting time) or some more options (`start`, `arrival`, `maxTravelTimeFootwayToStation`, `maxTravelTimeFootwayToDestination`) |
 | **Returns** | An `Array` of routes between the two stations |
 
-## CLI
-
-```
-$ npm install --global mvg-node
-```
-
-```
-$ mvg-node --help
-
-  Usage
-    mvg-node [input]
-
-  Options
-    --foo  Lorem ipsum [Default: false]
-
-  Examples
-    $ mvg-node
-    unicorns & rainbows
-    $ mvg-node ponies
-    ponies & rainbows
-```
-
 
 ## License
 
