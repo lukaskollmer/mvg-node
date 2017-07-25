@@ -18,7 +18,7 @@ $ npm install mvg-node
 const mvg = require('mvg-node');
 
 (async () => {
-  let home = await mvg.getStation(953)
+  let home = await mvg.getStation('Feldbergstr')
 
   let departures = await mvg.getDepartures(home);
   console.log(departures);
@@ -62,7 +62,7 @@ Fetch information about a specific station
 | `input`   | Either a `Number` (station ID) or a `String` (station name) |
 | **Returns** | An `Object` containing information about a specific station. This object can be passed to the other functions |
 
-#### `async getStation(input) -> array`
+#### `async getStations(input) -> array`
 Search stations by name
 
 | Parameter | Description |
