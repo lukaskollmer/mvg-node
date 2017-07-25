@@ -17,11 +17,19 @@ const makeRequest = url => {
   });
 };
 
+const toStation = async input => {
+  if (input instanceof Object) {
+    return input;
+  }
+  return await exports.getStation(input);
+};
+
 exports.allStations = async () => {
   return await makeRequest('/location/queryWeb?q=');
 };
 
 exports.getDepartures = async station => {
+  station = await toStation(station);
   let departures = await makeRequest(`/departure/${station.id}?footway=0`);
 
   return departures.departures.map(departure => {
@@ -38,13 +46,6 @@ exports.getStation = async input => {
 
 exports.getStations = async name => {
   return (await makeRequest(`/location/queryWeb?q=${name}`)).locations;
-};
-
-const toStation = async input => {
-  if (input instanceof Object) {
-    return input;
-  }
-  return await exports.getStation(input);
 };
 
 exports.getRoute = async (start, destination, options = new Date()) => {
