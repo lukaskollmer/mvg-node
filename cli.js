@@ -50,7 +50,7 @@ HasZoomData: ${station.hasZoomData}`;
 
       const table = new Table({
         head: ['  ⏳', ''],
-        colWidths: [9, 40]
+        colWidths: [8, 40]
       });
 
       if (!cli.flags.all) {
