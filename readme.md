@@ -154,7 +154,6 @@ Upcoming departures for 'Hauptbahnhof':
 │ 4 min   │ U2 Messestadt Ost                      │
 └─────────┴────────────────────────────────────────┘
 ```
-</details>
 
 
 
