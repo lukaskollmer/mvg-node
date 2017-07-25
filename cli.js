@@ -8,16 +8,20 @@ const mvg = require('.');
 
 const cli = meow(`
 	Usage
-	  $ mvg-node [input]
+	  $ mvg-node [input] <options>
+
+	Commands
+    station      Get information about a specific station
+    departures   Get upcoming departures for a specific station.
 
 	Options
-	  --foo  Lorem ipsum [Default: false]
+    --all        By default, this shows the next 10 departures. Pass \`--all\` to get all upcoming departures
+
 
 	Examples
-	  $ mvg-node
-	  unicorns & rainbows
-	  $ mvg-node ponies
-	  ponies & rainbows
+	  $ mvg-node station 953
+
+	  $ mvg-node departures 'Hauptbahnhof'
 `);
 
 (async () => {
