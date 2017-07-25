@@ -25,28 +25,31 @@ const mvg = require('mvg-node');
 })();
 ```
 
-Output:
-```
-[ { departureTime: 1500923983000,
-    product: 'b',
-    label: '194',
-    destination: 'Trudering Bf.',
-    live: true,
-    lineBackgroundColor: '#0d5c70',
-    departureId: 325930522,
-    sev: false,
-    time: 2017-07-24T19:19:43.000Z },
-  { departureTime: 1500924014000,
-    product: 'b',
-    label: '192',
-    destination: 'Neuperlach Zentrum',
-    live: true,
-    lineBackgroundColor: '#0d5c70',
-    departureId: -120781808,
-    sev: false,
-    time: 2017-07-24T19:20:14.000Z },
-    ... ]
-```
+<details>
+  <summary>Output</summary>
+  
+  ```
+  [ { departureTime: 1500923983000,
+      product: 'b',
+      label: '194',
+      destination: 'Trudering Bf.',
+      live: true,
+      lineBackgroundColor: '#0d5c70',
+      departureId: 325930522,
+      sev: false,
+      time: 2017-07-24T19:19:43.000Z },
+    { departureTime: 1500924014000,
+      product: 'b',
+      label: '192',
+      destination: 'Neuperlach Zentrum',
+      live: true,
+      lineBackgroundColor: '#0d5c70',
+      departureId: -120781808,
+      sev: false,
+      time: 2017-07-24T19:20:14.000Z },
+      ... ]
+  ```
+</details>
 
 
 ## API
