@@ -96,9 +96,11 @@ Get routes between two stations
 ```
 $ npm install --global mvg-node
 ```
+<details>
+  <summary>Usage</summary>
 
 ```
-$ node cli.js --help
+$ mvg-node --help
 
   NodeJS client for the Munich Public Transport System
 
@@ -118,6 +120,41 @@ $ node cli.js --help
 
     $ mvg-node departures 'Hauptbahnhof'
 ```
+</details>
+
+### Get departures
+
+```bash
+$ node cli.js departures 'Hauptbahnhof'
+```
+
+```
+Upcoming departures for 'Hauptbahnhof':
+┌─────────┬────────────────────────────────────────┐
+│   ⏳    │                                        │
+├─────────┼────────────────────────────────────────┤
+│ 1 min   │ S8 Herrsching                          │
+├─────────┼────────────────────────────────────────┤
+│ 1 min   │ U5 Neuperlach Süd                      │
+├─────────┼────────────────────────────────────────┤
+│ 1 min   │ U1 Olympia - Einkaufszentrum           │
+├─────────┼────────────────────────────────────────┤
+│ 1 min   │ U1 Mangfallplatz                       │
+├─────────┼────────────────────────────────────────┤
+│ 2 min   │ U5 Laimer Platz                        │
+├─────────┼────────────────────────────────────────┤
+│ 2 min   │ Bus 58 Silberhornstraße                │
+├─────────┼────────────────────────────────────────┤
+│ 3 min   │ S7 Höhenkirchen-Siegertsbrunn          │
+├─────────┼────────────────────────────────────────┤
+│ 4 min   │ U2 Feldmoching                         │
+├─────────┼────────────────────────────────────────┤
+│ 4 min   │ Tram 16 Romanplatz                     │
+├─────────┼────────────────────────────────────────┤
+│ 4 min   │ U2 Messestadt Ost                      │
+└─────────┴────────────────────────────────────────┘
+```
+</details>
 
 
 
