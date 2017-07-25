@@ -1,4 +1,4 @@
-# mvg-node [![Build Status](https://travis-ci.org/lukaskollmer/mvg-node.svg?branch=master)](https://travis-ci.org/lukaskollmer/mvg-node)
+# mvg-node [![CircleCI](https://circleci.com/gh/lukaskollmer/mvg-node.svg?style=svg)](https://circleci.com/gh/lukaskollmer/mvg-node) [![Build Status](https://travis-ci.org/lukaskollmer/mvg-node.svg?branch=master)](https://travis-ci.org/lukaskollmer/mvg-node)
 
 > NodeJS client for the Munich Public Transport System
 
