@@ -45,7 +45,7 @@ HasZoomData: ${station.hasZoomData}`;
       const station = await mvg.getStation(cli.input[1]);
       let departures = await mvg.getDepartures(station);
 
-      console.log(`Upcoming departures for '${station.name}'`);
+      console.log(`Upcoming departures for '${station.name}':`);
 
       const table = new Table({
         head: ['  ⏳', ''],
