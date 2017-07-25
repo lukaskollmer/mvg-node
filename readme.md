@@ -1,4 +1,4 @@
-# mvg-node [![Build Status](https://travis-ci.org/lukaskollmer/mvg-node.svg?branch=master)](https://travis-ci.org/lukaskollmer/mvg-node) [![Coverage Status](https://coveralls.io/repos/github/lukaskollmer/mvg-node/badge.svg?branch=master)](https://coveralls.io/github/lukaskollmer/mvg-node?branch=master)
+# mvg-node [![Build Status](https://travis-ci.org/lukaskollmer/mvg-node.svg?branch=master)](https://travis-ci.org/lukaskollmer/mvg-node)
 
 > MVG client for NodeJS
 
@@ -19,7 +19,6 @@ const mvg = require('mvg-node');
 
 (async () => {
   let home    = await mvg.getStation(953)
-  let pullach = await mvg.getStation('Pullach (im Isartal)')
 
   let departures = await mvg.getDepartures(home);
   console.log(departures);
