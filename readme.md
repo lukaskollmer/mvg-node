@@ -1,6 +1,6 @@
 # mvg-node [![Build Status](https://travis-ci.org/lukaskollmer/mvg-node.svg?branch=master)](https://travis-ci.org/lukaskollmer/mvg-node)
 
-> MVG client for NodeJS
+> NodeJS client for the Munich Public Transport System
 
 
 ## Install
@@ -27,7 +27,7 @@ const mvg = require('mvg-node');
 
 <details>
   <summary>Output</summary>
-  
+
   ```
   [ { departureTime: 1500923983000,
       product: 'b',

@@ -1,7 +1,7 @@
 {
   "name": "mvg-node",
   "version": "0.0.0",
-  "description": "MVG client for NodeJS",
+  "description": "NodeJS client for the Munich Public Transport System",
   "license": "MIT",
   "repository": "lukaskollmer/mvg-node",
   "author": {
