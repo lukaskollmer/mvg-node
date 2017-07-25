@@ -91,6 +91,35 @@ Get routes between two stations
 | `options`   | Either a date object (the route's starting time) or some more options (`start`, `arrival`, `maxTravelTimeFootwayToStation`, `maxTravelTimeFootwayToDestination`) |
 | **Returns** | An `Array` of routes between the two stations |
 
+## CLI
+
+```
+$ npm install --global mvg-node
+```
+
+```
+$ node cli.js --help
+
+  NodeJS client for the Munich Public Transport System
+
+  Usage
+    $ mvg-node [input] <options>
+
+  Commands
+     station      Get information about a specific station
+     departures   Get upcoming departures for a specific station.
+
+  Options
+     --all        By default, this shows the next 10 departures. Pass `--all` to get all upcoming departures
+
+
+  Examples
+    $ mvg-node station 953
+
+    $ mvg-node departures 'Hauptbahnhof'
+```
+
+
 
 ## License
 
