@@ -161,4 +161,4 @@ Upcoming departures for 'Hauptbahnhof':
 
 MIT © [Lukas Kollmer](https://lukaskollmer.me)
 
-`myg-node` was inspired by [leftshift/python_mvg_api](https://github.com/leftshift/python_mvg_api)
+`mvg-node` was inspired by [leftshift/python_mvg_api](https://github.com/leftshift/python_mvg_api)
