@@ -125,7 +125,7 @@ $ mvg-node --help
 ### Get departures
 
 ```bash
-$ node cli.js departures 'Hauptbahnhof'
+$ mvg-node departures 'Hauptbahnhof'
 ```
 
 ```
