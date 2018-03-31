@@ -58,10 +58,11 @@ HasZoomData: ${station.hasZoomData}`;
       }
 
       const type = {
-        b: 'Bus ',
-        s: 'S',
-        u: 'U',
-        t: 'Tram '
+        BUS: 'Bus ',
+        REGIONAL_BUS: 'Bus ',
+        SBAHN: '',
+        UBAHN: '',
+        TRAM: 'Tram '
       };
       let now = moment();
 
@@ -82,5 +83,3 @@ HasZoomData: ${station.hasZoomData}`;
     default: break;
   }
 })();
-
-// console.log(mvg(cli.input[0] || 'unicorns'));
