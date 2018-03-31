@@ -13,7 +13,8 @@ test('Load station', async t => {
     name: 'Feldbergstraße',
     hasLiveData: true,
     hasZoomData: false,
-    products: ['b'],
+    products: ['BUS'],
+    link: 'FBE',
     lines: {
       tram: [],
       nachttram: [],
