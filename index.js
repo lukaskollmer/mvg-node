@@ -11,6 +11,7 @@ const makeRequest = url => {
     request(options, (err, response, body) => {
       if (err) {
         reject(err);
+        return;
       }
       resolve(JSON.parse(body));
     });
@@ -46,6 +47,10 @@ exports.getStation = async input => {
 
 exports.getStations = async name => {
   return (await makeRequest(`/location/queryWeb?q=${name}`)).locations;
+};
+
+exports.getNearbyStations = async (latitude, longitude) => {
+  return (await makeRequest(`/location/nearby?latitude=${latitude}&longitude=${longitude}`)).locations;
 };
 
 exports.getRoute = async (start, destination, options = new Date()) => {
