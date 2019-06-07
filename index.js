@@ -13,7 +13,11 @@ const makeRequest = url => {
         reject(err);
         return;
       }
-      resolve(JSON.parse(body));
+      if (typeof body === 'string' && body.startsWith('<!DOCTYPE HTML PUBLIC')) {
+        resolve(null);
+      } else {
+        resolve(JSON.parse(body));
+      }
     });
   });
 };
@@ -67,6 +71,7 @@ exports.getRoute = async (start, destination, options = new Date()) => {
   let params = Object.entries(options).map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`).join('&');
 
   let response = await makeRequest(`/routing/?${params}`);
+  if (response === null) return null;
 
   response.connectionList.forEach(connection => {
     connection.departure = new Date(connection.departure).toLocaleString();
