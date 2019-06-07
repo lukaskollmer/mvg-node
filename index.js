@@ -13,10 +13,10 @@ const makeRequest = url => {
         reject(err);
         return;
       }
-      if (typeof body === 'string' && body.startsWith('<!DOCTYPE HTML PUBLIC')) {
-        resolve(null);
-      } else {
+      try {
         resolve(JSON.parse(body));
+      } catch {
+        resolve(null);
       }
     });
   });
