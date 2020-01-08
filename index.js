@@ -4,7 +4,7 @@ const request = require('request');
 const makeRequest = url => {
   return new Promise((resolve, reject) => {
     const options = {
-      url: `https://www.mvg.de/fahrinfo/api${url}`,
+      url: `https://www.mvg.de/api/fahrinfo${url}`,
       headers: {'X-MVG-Authorization-Key': '5af1beca494712ed38d313714d4caff6'}
     };
 
