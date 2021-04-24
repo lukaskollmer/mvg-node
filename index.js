@@ -43,6 +43,13 @@ exports.getDepartures = async station => {
   });
 };
 
+exports.getLines = async station => {
+  station = await toStation(station);
+  let departures = await makeRequest(`/departure/${station.id}?footway=0`);
+  if (!departures) return [];
+  return departures.servingLines;
+};
+
 exports.getStation = async input => {
   let endpoint = typeof input === 'number' ? '/location/query' : '/location/queryWeb';
 
